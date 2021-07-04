@@ -3,6 +3,15 @@ const account = require('./account') //account module is imported into the atm.j
 const prompt = require('prompt-sync')();
 
 
+//user Validation
+function valPin(pin){
+    if (pin == account.pin){ // if pin entered is equal to pin from the account.js file return true else, false.
+        return true          
+    }
+        return false
+}
+
+
 //current balance
 function getBalance(){
     console.log('Current Balance $');
@@ -23,14 +32,7 @@ function deposit(){
 
 }
 
-//user Validation
 
-function valPin(pin){
-    if (pin == account.pin){ // if pin entered is equal to pin from the account.js file return true else, false.
-        return true          
-    }
-        return false
-}
 
 
 
@@ -42,3 +44,4 @@ module.exports ={
     valPin:valPin
 
 }
+
