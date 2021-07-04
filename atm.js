@@ -14,12 +14,12 @@ function valPin(pin) {
 
 //withdrawal
 function withdraw() {
-//   console.log("Withdraw dollar amount");
+//console.log("Withdraw dollar amount");
   wallet.withdAmount = Number(prompt("Enter withdraw amount $ "));
 
   let cond = Number.isNaN(wallet.withdAmount);
   if (cond) {
-    console.log("Wrong input, please try again");
+    console.log("Invalid input. Choose from the follwoing menu.");
     return;
   }
 
@@ -29,22 +29,22 @@ function withdraw() {
 
 //Deposit
 function deposit() {
-//   console.log("Deposit dollar amount");
+  //   console.log("Deposit dollar amount");
   wallet.depAmount = Number(prompt("Enter deposite amount $ "));
 
   let cond = Number.isNaN(wallet.depAmount);
   if (cond) {
-    console.log("Wrong input, please try again");
+    console.log("Invalid input. Choose from the follwoing menu.");
     return;
   }
 
   account.bal = account.bal + wallet.depAmount;
-  console.log("You have successfully withdrawn $" + wallet.depAmount);
+  console.log("You have successfully deposited $" + wallet.depAmount);
 }
 
 //current balance
 function getBalance() {
-  console.log("Current Balance $");
+  console.log("Current balance $");
   console.log(account.bal); //import balance from the account.js module
 }
 
