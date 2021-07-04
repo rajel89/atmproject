@@ -31,6 +31,8 @@ while (true){
         case '1':
             atm.withdraw();
             break;
+        case '2':
+            
     }
 }
 
